@@ -30,7 +30,7 @@
   &bhm LSHFT A  &bhm LCTRL S &bhm LGUI D &bhm LALT F &kp G   &kp H     &bhm RALT J &bhm RGUI K &bhm RCTRL L &bhm RSHFT SEMI
   &kp Z         &kp X        &kp C       &kp V       &kp B   &kp N     &kp M       &kp COMMA   &kp DOT      &kp FSLH
   &kp ESC       &kp TAB      &none       &none       &none   &kp SPACE &kp BSPC    &kp MINUS   &kp APOS     &kp ENTER
-                                                  &kp mo1 &kp mo2
+                                                  &mo 1 &mo 2
                         >;
                 };
 
