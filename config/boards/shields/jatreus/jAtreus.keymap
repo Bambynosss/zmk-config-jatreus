@@ -23,46 +23,46 @@
 // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |
-// | ESC |     |     | TAB | LWL |   | RSL | BSP |  -  |  '  | TAB |
-//                           | ENT | SP |
+// | ESC | TAB | LGUI|LSHFT| LWL |   | RSL | CTRL| ALT |  @  |ENTER|
+//                           | BSP | SP |
                         bindings = <
-  &kp Q         &kp W        &kp E       &kp R       &kp T   &kp Y     &kp U       &kp I       &kp O        &kp P   
-  &bhm LSHFT A  &bhm LCTRL S &bhm LGUI D &bhm LALT F &kp G   &kp H     &bhm RALT J &bhm RGUI K &bhm RCTRL L &bhm RSHFT SEMI
-  &kp Z         &kp X        &kp C       &kp V       &kp B   &kp N     &kp M       &kp COMMA   &kp DOT      &kp FSLH
-  &kp ESC       &kp TAB      &none       &none       &none   &kp SPACE &kp BSPC    &kp MINUS   &kp APOS     &kp ENTER
-                                                  &mo 1 &mo 2
+  &kp Q         &kp W        &kp E       &kp R       &kp T      &kp Y      &kp U       &kp I       &kp O        &kp P   
+  &kp A         &kp S        &kp D       &kp F       &kp G      &kp H      &kp J       &kp K       &kp L        &kp SEMI
+  &kp Z         &kp X        &kp C       &kp V       &kp B      &kp N      &kp M       &kp COMMA   &kp DOT      &kp FSLH
+  &kp ESC       &kp TAB      &kp LGUI    &kp LSHFT   &mo 1      &mo 2      &kp RCTRL   &kp RALT    &kp AT       &kp ENTER
+                                                     &kp BSPC   &kp SPACE
                         >;
                 };
 
                 lower_layer {
 // ------------------------------------------------------------------
-// |  1  |  2  |  3  |  4  |  5  |   |  =  | CUT |  (  |  )  |  `  |
-// |  6  |  7  |  8  |  9  |  0  |   |  \  | CPY |  {  |  }  |  "  |
+// |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
+// |     |     |     |     |     |   |  \  | CPY |  {  |  }  |  "  |
 // |SHFT |     |     |     |     |   | END | PST |  [  |  ]  | RSHF|
 // | ESC |     |     |     |     |   | ADJ | DEL |  _  |     |     |
 //                           |     |    |
                         bindings = <
-  &kp N1    &kp N2 &kp N3 &kp N4 &kp N5 &kp EQUAL   &kp RG(X) &kp LPAR  &kp RPAR &kp GRAVE   
-  &kp N6    &kp N7 &kp N8 &kp N9 &kp N0 &kp BSLH    &kp RG(C) &kp LBRC  &kp RBRC &kp DQT
-  &kp LSHFT &none  &none  &none  &none  &kp END     &kp RG(V) &kp COMMA &kp DOT  &kp RSHFT
-  &none     &none  &none  &none  &none  &none       &kp DEL   &kp UNDER &none    &none
-                                             &none &mo 3
+  &kp N1    &kp N2 &kp N3 &kp N4 &kp N5   &kp N6    &kp N7    &kp N8   &kp N9   &kp N0   
+  &none     &none  &none  &none  &none    &none     &none     &none    &none    &none
+  &none     &none  &none  &none  &none    &none     &none     &none    &none    &none
+  &none     &none  &none  &none  &none    &none     &none     &none    &none    &none
+                                   &none &mo 3
                         >;
                 };
 
                 raise_layer {
 // ------------------------------------------------------------------
-// | CPS | MPV | PLY | MNX |     |   | PUP |  F1 |  F2 |  F3 |  F4 |
-// | LFT | DWN | UP  | LFT |     |   | PDW |  F5 |  F6 |  F7 |  F8 |
-// |SHFT | MTE | VL- | VL+ |HOME |   |     |  F9 | F10 | F11 | F12 |
-// |     |     |     |     |     |   |     |     |     |     |     |
-//                            |    |    |
+// |  F1  |  F2  |  F3  |  F4  |  F5  |   |  F6  |  F7  |  F8  |  F9  |  F10  |
+// |  F11 |  F12 |      |      |      |   |  \   | CPY  |  {   |  }   |  "    |
+// | SHFT |      |      |      |      |   | END  | PST  |  [   |  ]   | RSHF  |
+// | ESC  |      |      |      |      |   | ADJ  | DEL  |  _   |      |       |
+//                                |     |    |
                         bindings = <
-  &kp CAPS  &kp C_PREV &kp C_PP     &kp C_NEXT   &none      &kp PG_UP &kp F1 &kp F2  &kp F3  &kp F4   
-  &kp LEFT  &kp DOWN   &kp UP       &kp RIGHT    &none      &kp PG_DN &kp F5 &kp F6  &kp F7  &kp F8
-  &kp LSHFT &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp HOME   &none     &kp F9 &kp F10 &kp F11 &kp F12
-  &none     &none      &none        &kp TAB      &none      &trans    &none  &none   &none   &none
-                                                     &mo 3 &none
+  &kp F1    &kp F2   &kp F3 &kp F4 &kp F5   &kp F6    &kp F7    &kp F8   &kp F9   &kp F10   
+  &kp F11   &kp F12  &none  &none  &none    &none     &none     &none    &none    &none
+  &none     &none    &none  &none  &none    &none     &none     &none    &none    &none
+  &none     &none    &none  &none  &none    &none     &none     &none    &none    &none
+                                     &mo3 &none
                         >;
                 };
 
